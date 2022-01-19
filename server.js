@@ -13,21 +13,13 @@ app.set("view engine", "ejs");
 // setup routes
 const articlesRoute = require("./routes/articles");
 
+// setup article model
+articleModel = require("./models/article")
+
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-  const articles = [
-    {
-      title: "First article",
-      date: new Date(),
-      description: "some text here...",
-    },
-    {
-      title: "Second article",
-      date: new Date(),
-      description: "some text here...",
-    },
-  ];
+app.get("/", async (req, res) => {
+  const articles = await articleModel.find().sort({date: 'desc'})
   res.render("articles/index", { articles: articles });
 });
 
