@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviddelsol1998/Blog-NodeJS-Express-and-Mongo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daviddelsol1998/Blog-NodeJS-Express-and-Mongo/issues"
+  },
+  "homepage": "https://github.com/daviddelsol1998/Blog-NodeJS-Express-and-Mongo#readme",
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7",
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
