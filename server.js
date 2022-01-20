@@ -25,5 +25,5 @@ app.get("/", async (req, res) => {
 
 app.use("/articles", articlesRoute);
 
-// setup port on 3000
-app.listen(3000);
+// setup port on 80
+app.listen(80);
