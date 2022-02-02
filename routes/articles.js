@@ -17,7 +17,9 @@ router.get("/new", (req, res) => {
 
 router.get("/:id", async (req, res) => {
   const article = await articleModel.findById(req.params.id);
-  if (article == null) { res.redirect('/') }
+  if (article == null) {
+    res.redirect("/");
+  }
   res.render("articles/show", { article: article });
   // res.send(req.params.id)
 });

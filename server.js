@@ -14,12 +14,12 @@ app.set("view engine", "ejs");
 const articlesRoute = require("./routes/articles");
 
 // setup article model
-articleModel = require("./models/article")
+articleModel = require("./models/article");
 
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", async (req, res) => {
-  const articles = await articleModel.find().sort({date: 'desc'})
+  const articles = await articleModel.find().sort({ date: "desc" });
   res.render("articles/index", { articles: articles });
 });
 
