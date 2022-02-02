@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
   let article = new articleModel({
     title: req.body.title,
     description: req.body.description,
-    markdown: req.body.markdown,
+    journal_entry: req.body.journal_entry,
   });
   try {
     article = await article.save();
